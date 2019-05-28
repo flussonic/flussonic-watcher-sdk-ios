@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.platform     = :ios
     s.public_header_files = "*.framework/Headers/*.h"
     s.source_files = "*.framework/Headers/*.h"
-    s.vendored_frameworks = "FlussonicSDK.framework", "DynamicMobileVLCKit.framework"
+    s.vendored_frameworks = "FlussonicSDK.framework"
 
     # needed for TrueTime.framework
     # s.preserve_path = 'CTrueTime'
@@ -27,14 +27,7 @@ Pod::Spec.new do |s|
     s.dependency 'Alamofire', '~> 4.7.3'
     s.dependency 'Result', '~> 3.2.4'
     s.dependency 'TrueTime', '~> 5.0.0'
-
-    # vlc kit dependencies
-    s.frameworks = "QuartzCore", "CoreText", "AVFoundation", "Security", "CFNetwork", "AudioToolbox", "OpenGLES", "CoreGraphics", "VideoToolbox", "CoreMedia"
-    s.libraries = "c++", "xml2", "z", "bz2", "iconv"
-    s.xcconfig = {
-      'CLANG_CXX_LANGUAGE_STANDARD' => "c++11",
-      'CLANG_CXX_LIBRARY' => "libc++"
-    }
+    s.dependency 'DynamicMobileVLCKit', '~> 3.3.0'
 
     s.swift_version = "4.0"
     s.ios.deployment_target  = '9.3'

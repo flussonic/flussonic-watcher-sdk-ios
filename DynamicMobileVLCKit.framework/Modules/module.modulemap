@@ -1,6 +1,0 @@
-framework module DynamicMobileVLCKit {
-  umbrella header "DynamicMobileVLCKit.h"
-
-  export *
-  module * { export * }
-}
