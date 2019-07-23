@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F63E2CCBBF29DC3D8774BAA /* Pods_FlussonicWatcherSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FC28BD567907B3B9DE9815 /* Pods_FlussonicWatcherSample.framework */; };
+		880A2EB822BBC56D00635C45 /* FlussonicPlayerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880A2EB722BBC56D00635C45 /* FlussonicPlayerAdapter.swift */; };
+		88D4381022B9128A00188B27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4380F22B9128A00188B27 /* AppDelegate.swift */; };
+		88D4381222B9128A00188B27 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4381122B9128A00188B27 /* AuthorizationViewController.swift */; };
+		88D4381522B9128A00188B27 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D4381322B9128A00188B27 /* Authorization.storyboard */; };
+		88D4381722B9128B00188B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D4381622B9128B00188B27 /* Assets.xcassets */; };
+		88D4381A22B9128B00188B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D4381822B9128B00188B27 /* LaunchScreen.storyboard */; };
+		88D4383022B91FAF00188B27 /* CamerasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4382F22B91FAF00188B27 /* CamerasListViewController.swift */; };
+		88D4383222B920E600188B27 /* CameraListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4383122B920E600188B27 /* CameraListTableViewCell.swift */; };
+		88D4383C22B9224E00188B27 /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4383522B9224D00188B27 /* RobotoCondensed-BoldItalic.ttf */; };
+		88D4383D22B9224E00188B27 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4383622B9224D00188B27 /* RobotoCondensed-Bold.ttf */; };
+		88D4383E22B9224E00188B27 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4383722B9224D00188B27 /* Roboto-Regular.ttf */; };
+		88D4383F22B9224E00188B27 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4383822B9224E00188B27 /* RobotoCondensed-Light.ttf */; };
+		88D4384022B9224E00188B27 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4383922B9224E00188B27 /* RobotoCondensed-Italic.ttf */; };
+		88D4384122B9224E00188B27 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4383A22B9224E00188B27 /* RobotoCondensed-LightItalic.ttf */; };
+		88D4384222B9224E00188B27 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4383B22B9224E00188B27 /* RobotoCondensed-Regular.ttf */; };
+		88D4384422B927D400188B27 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4384322B927D400188B27 /* CameraViewController.swift */; };
+		88D4384722B928F800188B27 /* CameraRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4384622B928F800188B27 /* CameraRouting.swift */; };
+		88D4384822B92C7F00188B27 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D4382D22B91F6500188B27 /* Camera.storyboard */; };
+		88D4384B22B9339B00188B27 /* AuthorizationRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4384A22B9339B00188B27 /* AuthorizationRouting.swift */; };
+		88DDD9EC22C117000092C40C /* CustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DDD9EB22C117000092C40C /* CustomActivity.swift */; };
+		88E3886322BBBF370082F478 /* StreamStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E3886222BBBF370082F478 /* StreamStatusModel.swift */; };
+		88F0273922BA12DA00B158FE /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F0273822BA12DA00B158FE /* MainService.swift */; };
+		88F0273B22BA14C100B158FE /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F0273A22BA14C100B158FE /* AuthorizationService.swift */; };
+		88F0273D22BA14F600B158FE /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F0273C22BA14F600B158FE /* CameraService.swift */; };
+		88F0274022BA1C0600B158FE /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F0273F22BA1C0600B158FE /* CameraModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13DECF0A7B1C4C056650F518 /* Pods-FlussonicWatcherSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlussonicWatcherSample.debug.xcconfig"; path = "Target Support Files/Pods-FlussonicWatcherSample/Pods-FlussonicWatcherSample.debug.xcconfig"; sourceTree = "<group>"; };
+		74FC28BD567907B3B9DE9815 /* Pods_FlussonicWatcherSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlussonicWatcherSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		880A2EB722BBC56D00635C45 /* FlussonicPlayerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlussonicPlayerAdapter.swift; sourceTree = "<group>"; };
+		88D4380C22B9128A00188B27 /* FlussonicWatcherSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlussonicWatcherSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88D4380F22B9128A00188B27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		88D4381122B9128A00188B27 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		88D4381422B9128A00188B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
+		88D4381622B9128B00188B27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88D4381922B9128B00188B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88D4381B22B9128B00188B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88D4382E22B91F6500188B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Camera.storyboard; sourceTree = "<group>"; };
+		88D4382F22B91FAF00188B27 /* CamerasListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasListViewController.swift; sourceTree = "<group>"; };
+		88D4383122B920E600188B27 /* CameraListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListTableViewCell.swift; sourceTree = "<group>"; };
+		88D4383522B9224D00188B27 /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		88D4383622B9224D00188B27 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		88D4383722B9224D00188B27 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		88D4383822B9224E00188B27 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		88D4383922B9224E00188B27 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		88D4383A22B9224E00188B27 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		88D4383B22B9224E00188B27 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		88D4384322B927D400188B27 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		88D4384622B928F800188B27 /* CameraRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRouting.swift; sourceTree = "<group>"; };
+		88D4384A22B9339B00188B27 /* AuthorizationRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouting.swift; sourceTree = "<group>"; };
+		88DDD9EB22C117000092C40C /* CustomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivity.swift; sourceTree = "<group>"; };
+		88E3886222BBBF370082F478 /* StreamStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamStatusModel.swift; sourceTree = "<group>"; };
+		88F0273822BA12DA00B158FE /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		88F0273A22BA14C100B158FE /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		88F0273C22BA14F600B158FE /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		88F0273F22BA1C0600B158FE /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		B2394B646825FA580A71089C /* Pods-FlussonicWatcherSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlussonicWatcherSample.release.xcconfig"; path = "Target Support Files/Pods-FlussonicWatcherSample/Pods-FlussonicWatcherSample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88D4380922B9128A00188B27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F63E2CCBBF29DC3D8774BAA /* Pods_FlussonicWatcherSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6092CCBCE9AAE1D3F8D245E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74FC28BD567907B3B9DE9815 /* Pods_FlussonicWatcherSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		880A2EB622BBC55500635C45 /* PlayerAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				880A2EB722BBC56D00635C45 /* FlussonicPlayerAdapter.swift */,
+			);
+			path = PlayerAdapter;
+			sourceTree = "<group>";
+		};
+		88D4380322B9128A00188B27 = {
+			isa = PBXGroup;
+			children = (
+				88D4380E22B9128A00188B27 /* FlussonicWatcherSample */,
+				88D4380D22B9128A00188B27 /* Products */,
+				A8A71348F8446DF23D28B251 /* Pods */,
+				6092CCBCE9AAE1D3F8D245E1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		88D4380D22B9128A00188B27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88D4380C22B9128A00188B27 /* FlussonicWatcherSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88D4380E22B9128A00188B27 /* FlussonicWatcherSample */ = {
+			isa = PBXGroup;
+			children = (
+				88D4382922B91F2E00188B27 /* CameraModule */,
+				88D4382422B9171D00188B27 /* AuthorizationModule */,
+				88D4382122B916F400188B27 /* ServiceModule */,
+				88D4383322B9221B00188B27 /* Resource */,
+				88D4380F22B9128A00188B27 /* AppDelegate.swift */,
+				88D4381622B9128B00188B27 /* Assets.xcassets */,
+				88D4381822B9128B00188B27 /* LaunchScreen.storyboard */,
+				88D4381B22B9128B00188B27 /* Info.plist */,
+			);
+			path = FlussonicWatcherSample;
+			sourceTree = "<group>";
+		};
+		88D4382122B916F400188B27 /* ServiceModule */ = {
+			isa = PBXGroup;
+			children = (
+				88D4382222B9170600188B27 /* MainService */,
+				88D4382322B9171000188B27 /* OtherService */,
+			);
+			path = ServiceModule;
+			sourceTree = "<group>";
+		};
+		88D4382222B9170600188B27 /* MainService */ = {
+			isa = PBXGroup;
+			children = (
+				88F0273822BA12DA00B158FE /* MainService.swift */,
+			);
+			path = MainService;
+			sourceTree = "<group>";
+		};
+		88D4382322B9171000188B27 /* OtherService */ = {
+			isa = PBXGroup;
+			children = (
+				88F0273A22BA14C100B158FE /* AuthorizationService.swift */,
+				88F0273C22BA14F600B158FE /* CameraService.swift */,
+			);
+			path = OtherService;
+			sourceTree = "<group>";
+		};
+		88D4382422B9171D00188B27 /* AuthorizationModule */ = {
+			isa = PBXGroup;
+			children = (
+				88D4384922B9337C00188B27 /* Routing */,
+				88D4382622B9173100188B27 /* ViewControllers */,
+				88D4382522B9172D00188B27 /* Storyboards */,
+			);
+			path = AuthorizationModule;
+			sourceTree = "<group>";
+		};
+		88D4382522B9172D00188B27 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				88D4381322B9128A00188B27 /* Authorization.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		88D4382622B9173100188B27 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88D4381122B9128A00188B27 /* AuthorizationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		88D4382922B91F2E00188B27 /* CameraModule */ = {
+			isa = PBXGroup;
+			children = (
+				880A2EB622BBC55500635C45 /* PlayerAdapter */,
+				88D4384522B928B400188B27 /* Routing */,
+				88F0273E22BA1BF200B158FE /* Model */,
+				88D4382C22B91F5400188B27 /* Cells */,
+				88D4382B22B91F4000188B27 /* ViewControllers */,
+				88D4382A22B91F3A00188B27 /* Storyboards */,
+			);
+			path = CameraModule;
+			sourceTree = "<group>";
+		};
+		88D4382A22B91F3A00188B27 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				88D4382D22B91F6500188B27 /* Camera.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		88D4382B22B91F4000188B27 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88D4382F22B91FAF00188B27 /* CamerasListViewController.swift */,
+				88D4384322B927D400188B27 /* CameraViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		88D4382C22B91F5400188B27 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				88D4383122B920E600188B27 /* CameraListTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		88D4383322B9221B00188B27 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				88DDD9EA22C115CD0092C40C /* CustomClasses */,
+				88D4383422B9222200188B27 /* Founts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		88D4383422B9222200188B27 /* Founts */ = {
+			isa = PBXGroup;
+			children = (
+				88D4383722B9224D00188B27 /* Roboto-Regular.ttf */,
+				88D4383622B9224D00188B27 /* RobotoCondensed-Bold.ttf */,
+				88D4383522B9224D00188B27 /* RobotoCondensed-BoldItalic.ttf */,
+				88D4383922B9224E00188B27 /* RobotoCondensed-Italic.ttf */,
+				88D4383822B9224E00188B27 /* RobotoCondensed-Light.ttf */,
+				88D4383A22B9224E00188B27 /* RobotoCondensed-LightItalic.ttf */,
+				88D4383B22B9224E00188B27 /* RobotoCondensed-Regular.ttf */,
+			);
+			path = Founts;
+			sourceTree = "<group>";
+		};
+		88D4384522B928B400188B27 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				88D4384622B928F800188B27 /* CameraRouting.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		88D4384922B9337C00188B27 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				88D4384A22B9339B00188B27 /* AuthorizationRouting.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		88DDD9EA22C115CD0092C40C /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				88DDD9EB22C117000092C40C /* CustomActivity.swift */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		88F0273E22BA1BF200B158FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88F0273F22BA1C0600B158FE /* CameraModel.swift */,
+				88E3886222BBBF370082F478 /* StreamStatusModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A8A71348F8446DF23D28B251 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13DECF0A7B1C4C056650F518 /* Pods-FlussonicWatcherSample.debug.xcconfig */,
+				B2394B646825FA580A71089C /* Pods-FlussonicWatcherSample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88D4380B22B9128A00188B27 /* FlussonicWatcherSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88D4381E22B9128B00188B27 /* Build configuration list for PBXNativeTarget "FlussonicWatcherSample" */;
+			buildPhases = (
+				27E23FE0D4D040995FF5391F /* [CP] Check Pods Manifest.lock */,
+				88D4380822B9128A00188B27 /* Sources */,
+				88D4380922B9128A00188B27 /* Frameworks */,
+				88D4380A22B9128A00188B27 /* Resources */,
+				62502F9E9013A280C2A98CD7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlussonicWatcherSample;
+			productName = EarlyVideo;
+			productReference = 88D4380C22B9128A00188B27 /* FlussonicWatcherSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88D4380422B9128A00188B27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Personal;
+				TargetAttributes = {
+					88D4380B22B9128A00188B27 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 88D4380722B9128A00188B27 /* Build configuration list for PBXProject "FlussonicWatcherSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88D4380322B9128A00188B27;
+			productRefGroup = 88D4380D22B9128A00188B27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88D4380B22B9128A00188B27 /* FlussonicWatcherSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88D4380A22B9128A00188B27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88D4384122B9224E00188B27 /* RobotoCondensed-LightItalic.ttf in Resources */,
+				88D4383E22B9224E00188B27 /* Roboto-Regular.ttf in Resources */,
+				88D4384022B9224E00188B27 /* RobotoCondensed-Italic.ttf in Resources */,
+				88D4381A22B9128B00188B27 /* LaunchScreen.storyboard in Resources */,
+				88D4383D22B9224E00188B27 /* RobotoCondensed-Bold.ttf in Resources */,
+				88D4381722B9128B00188B27 /* Assets.xcassets in Resources */,
+				88D4383F22B9224E00188B27 /* RobotoCondensed-Light.ttf in Resources */,
+				88D4383C22B9224E00188B27 /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				88D4384822B92C7F00188B27 /* Camera.storyboard in Resources */,
+				88D4384222B9224E00188B27 /* RobotoCondensed-Regular.ttf in Resources */,
+				88D4381522B9128A00188B27 /* Authorization.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27E23FE0D4D040995FF5391F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlussonicWatcherSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62502F9E9013A280C2A98CD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlussonicWatcherSample/Pods-FlussonicWatcherSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlussonicWatcherSample/Pods-FlussonicWatcherSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlussonicWatcherSample/Pods-FlussonicWatcherSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88D4380822B9128A00188B27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88F0273D22BA14F600B158FE /* CameraService.swift in Sources */,
+				88F0273B22BA14C100B158FE /* AuthorizationService.swift in Sources */,
+				88F0274022BA1C0600B158FE /* CameraModel.swift in Sources */,
+				88D4383222B920E600188B27 /* CameraListTableViewCell.swift in Sources */,
+				88D4384422B927D400188B27 /* CameraViewController.swift in Sources */,
+				88F0273922BA12DA00B158FE /* MainService.swift in Sources */,
+				88D4381222B9128A00188B27 /* AuthorizationViewController.swift in Sources */,
+				88D4384722B928F800188B27 /* CameraRouting.swift in Sources */,
+				88D4383022B91FAF00188B27 /* CamerasListViewController.swift in Sources */,
+				880A2EB822BBC56D00635C45 /* FlussonicPlayerAdapter.swift in Sources */,
+				88D4381022B9128A00188B27 /* AppDelegate.swift in Sources */,
+				88D4384B22B9339B00188B27 /* AuthorizationRouting.swift in Sources */,
+				88E3886322BBBF370082F478 /* StreamStatusModel.swift in Sources */,
+				88DDD9EC22C117000092C40C /* CustomActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		88D4381322B9128A00188B27 /* Authorization.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88D4381422B9128A00188B27 /* Base */,
+			);
+			name = Authorization.storyboard;
+			sourceTree = "<group>";
+		};
+		88D4381822B9128B00188B27 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88D4381922B9128B00188B27 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		88D4382D22B91F6500188B27 /* Camera.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88D4382E22B91F6500188B27 /* Base */,
+			);
+			name = Camera.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88D4381C22B9128B00188B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		88D4381D22B9128B00188B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88D4381F22B9128B00188B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13DECF0A7B1C4C056650F518 /* Pods-FlussonicWatcherSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H3KJBLVZF8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FlussonicWatcherSample",
+					"$(PROJECT_DIR)/FlussonicWatcherSample/Resource",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FlussonicWatcherSample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Personal.FlussonicWatcherSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88D4382022B9128B00188B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2394B646825FA580A71089C /* Pods-FlussonicWatcherSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H3KJBLVZF8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FlussonicWatcherSample",
+					"$(PROJECT_DIR)/FlussonicWatcherSample/Resource",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FlussonicWatcherSample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Personal.FlussonicWatcherSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88D4380722B9128A00188B27 /* Build configuration list for PBXProject "FlussonicWatcherSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88D4381C22B9128B00188B27 /* Debug */,
+				88D4381D22B9128B00188B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88D4381E22B9128B00188B27 /* Build configuration list for PBXNativeTarget "FlussonicWatcherSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88D4381F22B9128B00188B27 /* Debug */,
+				88D4382022B9128B00188B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88D4380422B9128A00188B27 /* Project object */;
+}

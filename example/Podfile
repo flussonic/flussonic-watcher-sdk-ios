@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'FlussonicWatcherSample' do
+  pod 'SwiftyJSON'
+  pod 'ObjectMapper'
+  pod 'IQKeyboardManager'
+  pod 'DynamicMobileVLCKit', :tag => '3.3.0', :git => 'https://github.com/flussonic/DynamicMobileVLCKit.git'
+  pod 'TrueTime', :tag => '5.0.0', :git => 'https://github.com/instacart/TrueTime.swift'
+  pod 'flussonic-watcher-sdk-ios', :tag => '0.3.4', :git => 'https://github.com/flussonic/flussonic-watcher-sdk-ios.git'
+
+  use_frameworks!
+
+  # Pods for ErlyVideo
+
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '4.0'
+      end
+    end
+  end
+end
