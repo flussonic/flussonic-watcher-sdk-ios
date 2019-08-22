@@ -3,20 +3,28 @@
 //
 
 import UIKit
-import FlussonicSDK
 import DynamicMobileVLCKit
+import FlussonicSDK
 
 class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPlayerDelegate {
     
     private var player: VLCMediaPlayer!
     
+    private var timeObservation: NSKeyValueObservation?
+    
     override init() {
         super.init()
         
         player = VLCMediaPlayer()
+       // player.libraryInstance.debugLogging = true
         player.delegate = self
+        self.setupTimeObservation()
     }
     
+    deinit {
+        timeObservation?.invalidate()
+    }
+
     // MARK: - FlussonicPlayerAdapterProtocol
     var delegate: FlussonicPlayerAdapterDelegate?
     
@@ -47,7 +55,7 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
     }
     
     var timeValue: Double {
-        guard player.time != nil else { return 0 }
+        guard player.time != nil, player.time.value != nil else { return 0 }
         return player.time.value.doubleValue
     }
     
@@ -60,9 +68,8 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
             player.stop()
             player.media = nil
             
-            guard newValue != nil else { return }
-            
-            player.media = VLCMedia(url: newValue!)
+            guard let newValue = newValue else { return }
+            player.media = VLCMedia(url: newValue)
             player.play()
         }
     }
@@ -119,5 +126,16 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
     func mediaPlayerSnapshot(_ aNotification: Notification!) {
         delegate?.mediaPlayerSnapshot(Notification(name: Notification.Name("mediaPlayerSnapshot"), object: self, userInfo: nil))
     }
-    
+}
+
+// MARK: Time Observation
+private extension FlussonicVlcAdapter {
+    func setupTimeObservation() {
+        timeObservation = player.observe(\VLCMediaPlayer.time, options: [.new, .initial, .old], changeHandler: { [weak self] (_, kind) in
+            guard let `self` = self,
+                let values = kind.newValue?.both(with: kind.oldValue.joining()),
+                values.a.value != nil, values.b.value != nil else { return }
+            self.delegate?.mediaPlayerTimeChanged(oldTimeValue: values.b.value.doubleValue, newTimeValue: values.a.value.doubleValue)
+        })
+    }
 }
