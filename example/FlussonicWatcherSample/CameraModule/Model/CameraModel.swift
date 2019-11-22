@@ -40,7 +40,7 @@ class CameraModel: NSObject, Mappable {
         lastEventTime   <- map["last_event_time"]
         token           <- map["playback_config.token"]
 
-        urlForPlayer = "https://\(AuthorizationService.shared.session)@\(host):\(streamStatus.https_port)/\(name)?from=\(lastEventTime)/"
+        urlForPlayer = "https://\(AuthorizationService.shared.session)@\(host)/\(name)?from=\(lastEventTime)/"
         print(urlForPlayer)
         urlForPreview = "https://\(host):\(streamStatus.https_port)/\(name)/preview.mp4?token=\(token)"
         
