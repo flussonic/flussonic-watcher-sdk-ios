@@ -29,6 +29,7 @@ class CameraViewController: UIViewController {
             return
         }
         self.watcherView.frame = self.playerView.frame
+        self.watcherView.alertDelegate = self
         self.playerView.addSubview(self.watcherView)
         watcherView.configure(withUrl: url, playerAdapter: playerAdapter)
     }
