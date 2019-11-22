@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-let host = "cloud.vsaas.io"
+let host = "demo-watcher.flussonic.com"
 
 class CameraModel: NSObject, Mappable {
     
