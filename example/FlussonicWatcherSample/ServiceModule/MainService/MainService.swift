@@ -17,7 +17,7 @@ class MainService: NSObject {
     
     let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.apple.com")
     
-    internal let host = "https://cloud.vsaas.io/"
+    internal let host = "https://demo-watcher.flussonic.com/"
     
     public func sendRequest(requestType: HTTPMethod, url:String, parameters:[String: AnyObject]?, paramsEncoding: ParameterEncoding, completion:@escaping RequestJsonCompletion) {
         
