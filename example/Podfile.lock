@@ -1,48 +1,52 @@
 PODS:
-  - Alamofire (4.7.3)
+  - Alamofire (4.9.1)
+  - Async (0.2.0)
   - DynamicMobileVLCKit (3.3.0)
-  - flussonic-watcher-sdk-ios (0.3.4):
-    - Alamofire (~> 4.7.3)
-    - DynamicMobileVLCKit (~> 3.3.0)
-    - Moya/RxSwift (= 11.0.2)
-    - Result (~> 3.2.4)
-    - RxCocoa (~> 4.2.0)
-    - RxSwift (~> 4.2.0)
-    - TrueTime (~> 5.0.0)
+  - flussonic-watcher-sdk-ios (1.5.3):
+    - Async
+    - DynamicMobileVLCKit (~> 3.3)
+    - Moya/RxSwift (~> 13.0.0)
+    - RxCocoa
+    - SwiftyXMLParser
+    - TrueTime (~> 5.0)
   - IQKeyboardManager (6.4.0)
-  - Moya/Core (11.0.2):
+  - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 3.0)
-  - Moya/RxSwift (11.0.2):
+    - Result (~> 4.1)
+  - Moya/RxSwift (13.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
   - ObjectMapper (3.5.1)
-  - Result (3.2.4)
-  - RxCocoa (4.2.0):
-    - RxSwift (~> 4.0)
-  - RxSwift (4.2.0)
+  - Result (4.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
   - SwiftyJSON (5.0.0)
-  - TrueTime (5.0.0):
-    - Result (~> 3.0)
+  - SwiftyXMLParser (5.0.0)
+  - TrueTime (5.0.3)
 
 DEPENDENCIES:
   - DynamicMobileVLCKit (from `https://github.com/flussonic/DynamicMobileVLCKit.git`, tag `3.3.0`)
-  - flussonic-watcher-sdk-ios (from `https://github.com/flussonic/flussonic-watcher-sdk-ios.git`, tag `0.3.4`)
+  - flussonic-watcher-sdk-ios (from `https://github.com/flussonic/flussonic-watcher-sdk-ios.git`, tag `1.5.3`)
   - IQKeyboardManager
   - ObjectMapper
   - SwiftyJSON
-  - TrueTime (from `https://github.com/instacart/TrueTime.swift`, tag `5.0.0`)
+  - TrueTime (~> 5.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
+  https://github.com/CocoaPods/Specs.git:
     - IQKeyboardManager
-    - Moya
     - ObjectMapper
+    - SwiftyJSON
+  trunk:
+    - Alamofire
+    - Async
+    - Moya
     - Result
     - RxCocoa
     - RxSwift
-    - SwiftyJSON
+    - SwiftyXMLParser
+    - TrueTime
 
 EXTERNAL SOURCES:
   DynamicMobileVLCKit:
@@ -50,10 +54,7 @@ EXTERNAL SOURCES:
     :tag: 3.3.0
   flussonic-watcher-sdk-ios:
     :git: https://github.com/flussonic/flussonic-watcher-sdk-ios.git
-    :tag: 0.3.4
-  TrueTime:
-    :git: https://github.com/instacart/TrueTime.swift
-    :tag: 5.0.0
+    :tag: 1.5.3
 
 CHECKOUT OPTIONS:
   DynamicMobileVLCKit:
@@ -61,24 +62,23 @@ CHECKOUT OPTIONS:
     :tag: 3.3.0
   flussonic-watcher-sdk-ios:
     :git: https://github.com/flussonic/flussonic-watcher-sdk-ios.git
-    :tag: 0.3.4
-  TrueTime:
-    :git: https://github.com/instacart/TrueTime.swift
-    :tag: 5.0.0
+    :tag: 1.5.3
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Async: d80205f1a1b4eea24de8ddc62cf5197ff3025330
   DynamicMobileVLCKit: c53a1dc364edf87a5a3a5c1f503501fe4bd58dc5
-  flussonic-watcher-sdk-ios: 366fc1269046a4953d96e1dfe7ec8c6bd1ddc7ef
+  flussonic-watcher-sdk-ios: e12e22785dda3a7d314d327058360435941bf361
   IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
-  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
-  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  TrueTime: b8a510e8bd64abb9c7f89ff44b4e8033eaf1b337
+  SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
+  TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
 
-PODFILE CHECKSUM: 63f449c8e47eb784cb065944ba32a865f3351361
+PODFILE CHECKSUM: d2d44405b4d24e7faee37ac7623b024636b0ee70
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.4
