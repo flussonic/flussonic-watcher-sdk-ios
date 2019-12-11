@@ -12,8 +12,8 @@ import FlussonicSDK
 class CamerasListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
-    
-    var allCamerasArray:[CameraModel] = []
+
+    var allCamerasArray:[CameraItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class CamerasListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CameraListTableViewCell", for: indexPath) as! CameraListTableViewCell
-        cell.customizeCell(camera: allCamerasArray[indexPath.row])
+        cell.cameraItem = allCamerasArray[indexPath.row]
         return cell
     }
     
@@ -41,10 +41,13 @@ class CamerasListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if allCamerasArray[indexPath.row].isOnline == false {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let cameraItem = allCamerasArray[indexPath.row]
+        if cameraItem.isAlive() == false {
             return
         } else {
-            CameraRouting.showCameraScreen(fromVC: self, camera: allCamerasArray[indexPath.row])
+            CameraRouting.showCameraScreen(fromVC: self, camera: cameraItem)
         }
     }
     
