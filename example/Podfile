@@ -5,9 +5,9 @@ target 'FlussonicWatcherSample' do
   pod 'SwiftyJSON'
   pod 'ObjectMapper'
   pod 'IQKeyboardManager'
-  pod 'DynamicMobileVLCKit', :tag => '3.3.0', :git => 'https://github.com/flussonic/DynamicMobileVLCKit.git'
-  pod 'TrueTime', '~> 5.0.0'
-  pod 'flussonic-watcher-sdk-ios', :tag => '1.5.3', :git => 'https://github.com/flussonic/flussonic-watcher-sdk-ios.git'
+  # required dependency for flussonic-watcher-sdk-ios
+  pod 'DynamicMobileVLCKit', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.0/DynamicMobileVLCKit.zip'  
+  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/1.5.6/FlussonicSDK.zip'
 
   use_frameworks!
 
