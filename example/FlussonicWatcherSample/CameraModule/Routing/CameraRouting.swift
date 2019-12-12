@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import FlussonicSDK
 
 class CameraRouting: NSObject {
-    static func showCameraScreen(fromVC: UIViewController, camera: CameraModel) {
+    static func showCameraScreen(fromVC: UIViewController, camera: CameraItem) {
         let vc = UIStoryboard(name: "Camera", bundle: nil).instantiateViewController(withIdentifier: "CameraViewController") as! CameraViewController
         vc.camera = camera
         fromVC.navigationController?.pushViewController(vc, animated: true)

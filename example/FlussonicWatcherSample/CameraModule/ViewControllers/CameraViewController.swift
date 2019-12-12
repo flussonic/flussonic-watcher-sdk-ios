@@ -14,7 +14,7 @@ class CameraViewController: UIViewController {
     
     @IBOutlet var playerView: UIView!
     
-    var camera: CameraModel!
+    var camera: CameraItem!
     private var playerAdapter = FlussonicPlayerAdapter()
     private var watcherView = FlussonicWatcherView()
 
@@ -25,13 +25,13 @@ class CameraViewController: UIViewController {
     }
     
     private func setupPlayer() {
-        guard let url = URL(string: camera.urlForPlayer) else {
+        guard camera != nil else {
             return
         }
         self.watcherView.frame = self.playerView.frame
         self.watcherView.alertDelegate = self
         self.playerView.addSubview(self.watcherView)
-        watcherView.configure(withUrl: url, playerAdapter: playerAdapter)
+        watcherView.configure(withCameraItem: camera, playerAdapter: playerAdapter)
     }
     
     //MARK: - Navigation
