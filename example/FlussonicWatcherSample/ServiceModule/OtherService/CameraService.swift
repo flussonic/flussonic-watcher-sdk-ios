@@ -9,8 +9,9 @@
 import UIKit
 import ObjectMapper
 import Alamofire
+import FlussonicSDK
 
-typealias RequestCamerasList = (_ cameras:[CameraModel], _ error: String?) -> Void
+typealias RequestCamerasList = (_ cameras:[CameraItem], _ error: String?) -> Void
 
 class CameraService: MainService {
     
@@ -26,21 +27,19 @@ class CameraService: MainService {
                 return
             }
             
-            var allCameras: [CameraModel] = []
-            
-            let jsonNotes = jsonData?.arrayObject
-            
-            if jsonNotes != nil {
-                for item in jsonNotes! {
-                    if let camera = CameraModel(map: Map(mappingType: .fromJSON, JSON: item as! [String : Any])) {
-                        allCameras.append(camera)
-                        
-                    }
+            var allCameras: [CameraItem] = []
+            if (error == nil) {
+                do{
+                    let data = try jsonData?.rawData()
+                    allCameras = try JSONDecoder().decode([CameraItem].self,from: data!)
+                    completion(allCameras, nil)
+                    return
+                }catch let jsonErr {
+                    print("Error while parsing jsonData", jsonErr)
+                    completion([], jsonErr.localizedDescription)
                 }
-                completion(allCameras, nil)
-            } else {
-                completion([], "Ошибка загрузки")
             }
+            completion([], "Ошибка загрузки")
         }
     }
 }
