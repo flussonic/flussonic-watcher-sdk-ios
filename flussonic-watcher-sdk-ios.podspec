@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "flussonic-watcher-sdk-ios"
-    s.version      = "1.5.3"
+    s.version      = "1.5.6"
     s.summary      = "Flussonic Watcher iOS SDK"
     s.description  = <<-DESC
     Flussonic Watcher iOS SDK
@@ -8,7 +8,9 @@ Pod::Spec.new do |s|
     s.homepage     = "https://flussonic.com/doc"
     s.license      = { :type => 'Copyright', :file => "LICENSE" }
     s.author       = { "Flussonic Team" => "info@flussonic.com" }
-    s.source       = { :git => "https://github.com/flussonic/flussonic-watcher-sdk-ios.git", :tag => "#{s.version}" }
+    s.source       = {
+      :http => "https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/#{s.version}/FlussonicSDK.zip"
+    }
     s.platform     = :ios
 
     s.preserve_paths = 'LICENSE', 'README.md'

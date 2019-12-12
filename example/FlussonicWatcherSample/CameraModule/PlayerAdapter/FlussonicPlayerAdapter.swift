@@ -1,24 +1,27 @@
 //
-//  FlussonicPlayer.swift
-//  ErlyVideo
-//
-//  Created by Dmitry on 20/06/2019.
-//  Copyright © 2019 Personal. All rights reserved.
+//  FlussonicPlayerAdapter.swift
 //
 
 import UIKit
-import FlussonicSDK
 import DynamicMobileVLCKit
+import FlussonicSDK
 
 class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPlayerDelegate {
     
     private var player: VLCMediaPlayer!
+    
+    private var timeObservation: NSKeyValueObservation?
     
     override init() {
         super.init()
         
         player = VLCMediaPlayer()
         player.delegate = self
+        setupTimeObservation()
+    }
+    
+    deinit {
+        timeObservation?.invalidate()
     }
     
     // MARK: - FlussonicPlayerAdapterProtocol
@@ -124,4 +127,15 @@ class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMedia
         delegate?.mediaPlayerSnapshot(Notification(name: Notification.Name("mediaPlayerSnapshot"), object: self, userInfo: nil))
     }
     
+}
+
+private extension FlussonicPlayerAdapter {
+    func setupTimeObservation() {
+        timeObservation = player.observe(\VLCMediaPlayer.time, options: [.new, .initial, .old], changeHandler: { [weak self] (_, kind) in
+            guard let `self` = self,
+                let values = kind.newValue?.both(with: kind.oldValue.joining()),
+                values.a.value != nil, values.b.value != nil else { return }
+            self.delegate?.mediaPlayerTimeChanged(oldTimeValue: values.b.value.doubleValue, newTimeValue: values.a.value.doubleValue)
+        })
+    }
 }
