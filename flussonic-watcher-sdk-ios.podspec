@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "flussonic-watcher-sdk-ios"
-    s.version      = "1.5.6"
+    s.version      = "2.0.0"
     s.summary      = "Flussonic Watcher iOS SDK"
     s.description  = <<-DESC
     Flussonic Watcher iOS SDK
@@ -16,13 +16,13 @@ Pod::Spec.new do |s|
     s.preserve_paths = 'LICENSE', 'README.md'
     s.public_header_files = "*.framework/Headers/*.h"
     s.source_files = "*.framework/Headers/*.h"
-    s.vendored_frameworks = "FlussonicSDK.framework", "RxSwift.framework"
+    s.vendored_frameworks = "FlussonicSDK.framework"
 
     s.dependency 'Async'
     s.dependency 'DynamicMobileVLCKit', '~> 3.3'
     s.dependency 'RxCocoa'
-    # s.dependency 'RxSwift'
-    s.dependency 'Moya/RxSwift', '~> 13.0.0'
+    s.dependency 'RxSwift'
+    s.dependency 'Moya/RxSwift', '~> 13.0'
     s.dependency 'TrueTime', '~> 5.0'
     s.dependency 'SwiftyXMLParser'
 

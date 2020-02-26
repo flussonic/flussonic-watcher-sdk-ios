@@ -8,6 +8,18 @@ target 'FlussonicWatcherSample' do
   pod 'IQKeyboardManager'
   # required dependency for flussonic-watcher-sdk-ios
   pod 'DynamicMobileVLCKit', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.0/DynamicMobileVLCKit.zip'  
-  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/1.5.6/FlussonicSDK.zip'
+  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.0.0/FlussonicSDK.zip'
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == "RxSwift"
+      target.build_configurations.each do |config|
+        if config.name == "Debug"
+          config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = []
+        end
+      end
+    end
+  end
 end
