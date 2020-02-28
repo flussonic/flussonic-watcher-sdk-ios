@@ -4,6 +4,7 @@
 
 import UIKit
 import DynamicMobileVLCKit
+import FlussonicSDK
 
 class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPlayerDelegate {
     
@@ -128,6 +129,7 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
     
 }
 
+// MARK: Time Observation
 private extension FlussonicVlcAdapter {
     func setupTimeObservation() {
         timeObservation = player.observe(\VLCMediaPlayer.time, options: [.new, .initial, .old], changeHandler: { [weak self] (_, kind) in
