@@ -15,7 +15,6 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
     override init() {
         super.init()
         player = VLCMediaPlayer()
-        //        player.libraryInstance.debugLogging = true
         player!.delegate = self
         setupTimeObservation()
     }
