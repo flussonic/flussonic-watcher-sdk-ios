@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.3'
+platform :ios, '10.1'
 
 target 'FlussonicWatcherSample' do
   use_frameworks!
@@ -8,7 +8,7 @@ target 'FlussonicWatcherSample' do
   pod 'IQKeyboardManager'
   # required dependency for flussonic-watcher-sdk-ios
   pod 'DynamicMobileVLCKit', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.0/DynamicMobileVLCKit.zip'  
-  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.0.0/FlussonicSDK.zip'
+  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.2.0/FlussonicSDK.zip'
 
 end
 
