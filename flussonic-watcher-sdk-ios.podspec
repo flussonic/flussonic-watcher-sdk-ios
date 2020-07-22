@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "flussonic-watcher-sdk-ios"
-    s.version      = "2.0.0"
+    s.version      = "2.2.0"
     s.summary      = "Flussonic Watcher iOS SDK"
     s.description  = <<-DESC
     Flussonic Watcher iOS SDK
@@ -20,12 +20,12 @@ Pod::Spec.new do |s|
 
     s.dependency 'Async'
     s.dependency 'DynamicMobileVLCKit', '~> 3.3'
-    s.dependency 'RxCocoa'
-    s.dependency 'RxSwift'
-    s.dependency 'Moya/RxSwift', '~> 13.0'
+    s.dependency 'RxCocoa', '~> 5.0'
+    s.dependency 'RxSwift', '~> 5.0'
+    s.dependency 'Moya/RxSwift', '~> 14.0'
     s.dependency 'TrueTime', '~> 5.0'
     s.dependency 'SwiftyXMLParser'
 
     s.swift_version = "5.0"
-    s.ios.deployment_target  = '9.3'
+    s.ios.deployment_target  = '10.1'
 end

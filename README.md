@@ -1,26 +1,29 @@
 ## Installation with Cocoapods
 
-Add these lines to your Podfile:
++ Add these lines to your Podfile:
   ```ruby
   use_frameworks!
   # required dependency for flussonic-watcher-sdk-ios
   pod 'DynamicMobileVLCKit', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.0/DynamicMobileVLCKit.zip'
   
-  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.0.0/FlussonicSDK.zip'
+  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.2.0/FlussonicSDK.zip'
+  ```
   
-  # At the very bottom of Podfile add this because of RxSwift bug https://github.com/ReactiveX/RxSwift/issues/1972
-  post_install do |installer|
-    installer.pods_project.targets.each do |target|
-      if target.name == "RxSwift"
-        target.build_configurations.each do |config|
-          if config.name == "Debug"
-            config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = []
++ At the very bottom of Podfile add this because of RxSwift bug - https://github.com/ReactiveX/RxSwift/issues/1972
+  ```ruby
+    post_install do |installer|
+      installer.pods_project.targets.each do |target|
+        if target.name == "RxSwift"
+          target.build_configurations.each do |config|
+            if config.name == "Debug"
+              config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = []
+            end
           end
         end
       end
     end
-  end
   ```
+
 Install dependencies
   ```
   pod cache clean --all
@@ -28,7 +31,7 @@ Install dependencies
   ```
 
 ## Troubleshooting
-The flussonic-watcher-sdk-ios frameworks were built with Xcode version 11.3 and are not compatible with other Xcode versions because of Apple restrictions concerning .swiftmodule files. We strongly recommend that you use only Xcode 11.3. When using Xcode of a different version, you may get errors like:
+The flussonic-watcher-sdk-ios frameworks were built with Xcode version 11.5 and are not compatible with other Xcode versions because of Apple restrictions concerning .swiftmodule files. We strongly recommend that you use only Xcode 11.5. When using Xcode of a different version, you may get errors like:
 
 ```
 Module compiled with Swift 4.2.1 cannot be imported by the Swift 5.0.1 compiler: flussonic-watcher-sdk-ios/example/Pods/flussonic-watcher-sdk-ios/FlussonicSDK.framework/Modules/FlussonicSDK.swiftmodule/x86_64.swiftmodule

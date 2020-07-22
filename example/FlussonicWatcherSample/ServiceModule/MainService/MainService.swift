@@ -34,7 +34,7 @@ class MainService: NSObject {
             headers = ["x-vsaas-session" : AuthorizationService.shared.session]
         }
         
-        Alamofire.request(url as URLConvertible, method: requestType, parameters: parameters, encoding: paramsEncoding, headers: headers).responseJSON { (dataResponse) in
+        AF.request(url as URLConvertible, method: requestType, parameters: parameters, encoding: paramsEncoding, headers: headers).responseJSON { (dataResponse) in
             print(parameters as Any)
             debugPrint(dataResponse)
             switch dataResponse.result {
