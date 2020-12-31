@@ -20,7 +20,8 @@ class CameraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Камера " + camera.title
+        let title = camera.title ?? "unknown"
+        self.navigationItem.title = "Камера " + title
         self.setupPlayer()
     }
     

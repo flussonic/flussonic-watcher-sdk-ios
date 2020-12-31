@@ -15,7 +15,6 @@ class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMedia
     override init() {
         super.init()
         player = VLCMediaPlayer()
-        //        player.libraryInstance.debugLogging = true
         player!.delegate = self
         setupTimeObservation()
     }
@@ -29,7 +28,8 @@ class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMedia
 
     var drawable: UIView? {
         get {
-            return (player?.drawable as? UIView)
+            guard let view = player?.drawable as? UIView else { return nil }
+            return view
         }
         set {
             player?.drawable = newValue
@@ -67,8 +67,8 @@ class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMedia
         }
         set {
             stop()
-            player?.media = nil
             guard newValue != nil else { return }
+            player?.media = nil
             fixScaleToFill()
             player?.media = VLCMedia(url: newValue!)
             player?.play()

@@ -1,8 +1,8 @@
 PODS:
   - Alamofire (5.2.1)
   - Async (0.2.0)
-  - DynamicMobileVLCKit (3.3.0)
-  - flussonic-watcher-sdk-ios (2.2.0):
+  - DynamicMobileVLCKit (3.3.13)
+  - flussonic-watcher-sdk-ios (2.3.1):
     - Async
     - DynamicMobileVLCKit (~> 3.3)
     - Moya/RxSwift (~> 14.0)
@@ -28,8 +28,8 @@ PODS:
   - TrueTime (5.0.3)
 
 DEPENDENCIES:
-  - "DynamicMobileVLCKit (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.0/DynamicMobileVLCKit.zip\"}`)"
-  - "flussonic-watcher-sdk-ios (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.2.0/FlussonicSDK.zip\"}`)"
+  - "DynamicMobileVLCKit (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip\"}`)"
+  - "flussonic-watcher-sdk-ios (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.3.1/FlussonicSDK.zip\"}`)"
   - IQKeyboardManager
   - ObjectMapper
   - SwiftyJSON
@@ -50,21 +50,21 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   DynamicMobileVLCKit:
-    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.0/DynamicMobileVLCKit.zip
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip
   flussonic-watcher-sdk-ios:
-    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.2.0/FlussonicSDK.zip
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.3.1/FlussonicSDK.zip
 
 CHECKOUT OPTIONS:
   DynamicMobileVLCKit:
-    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.0/DynamicMobileVLCKit.zip
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip
   flussonic-watcher-sdk-ios:
-    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.2.0/FlussonicSDK.zip
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.3.1/FlussonicSDK.zip
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Async: d80205f1a1b4eea24de8ddc62cf5197ff3025330
-  DynamicMobileVLCKit: ae9bbd82c113eb3bceed151d16bd2503d75cae56
-  flussonic-watcher-sdk-ios: 16c91fa136e8dd871f49f8a37cd5b0131245916e
+  DynamicMobileVLCKit: 59202100083620330a0d439a61a90261851e794a
+  flussonic-watcher-sdk-ios: 5448b24182f8e6002279a1e3fb458b3f1e5612d0
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
@@ -75,6 +75,6 @@ SPEC CHECKSUMS:
   SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
 
-PODFILE CHECKSUM: 84a37b0775aeae17f9472b08fc2bfd12c4cceae2
+PODFILE CHECKSUM: af7275b4cc7ae81712aedcff4b5a00cf0b6adaa0
 
 COCOAPODS: 1.9.3
