@@ -20,6 +20,7 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
     }
 
     deinit {
+        stop()
         timeObservation?.invalidate()
     }
 
@@ -55,8 +56,8 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
 
     var timeValue: Double {
         guard let plr = player,
-            let time = plr.time,
-            time.value != nil else { return -0.001 }
+              let time = plr.time,
+              time.value != nil else { return -0.001 }
         return Double(truncating: time.value)
     }
 
@@ -89,18 +90,18 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
     func disableAudioTrack(audioDisabled: Bool) {
         guard let plr = player else { return }
         guard let idx = FlussonicVLCHelpers.calcAudioTrackIndex(
-            audioDisabled: audioDisabled,
-            currentAudioTrackIndex: plr.currentAudioTrackIndex,
-            audioTrackIndexes: plr.audioTrackIndexes) else { return }
+                audioDisabled: audioDisabled,
+                currentAudioTrackIndex: plr.currentAudioTrackIndex,
+                audioTrackIndexes: plr.audioTrackIndexes) else { return }
         plr.currentAudioTrackIndex = idx
     }
 
     func fixScaleToFill() {
         DispatchQueue.main.async {
             guard self.drawable != nil,
-                self.player != nil
-                else {
-                    return
+                  self.player != nil
+            else {
+                return
             }
             let aspectRatio = FlussonicVLCHelpers.calcAspectRatio(drawableView: self.drawable)
             self.player?.videoAspectRatio = aspectRatio
@@ -113,9 +114,9 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
 
     var state: FlussonicPlayerAdapterState {
         guard let plr = player,
-            let pState = FlussonicPlayerAdapterState(rawValue: plr.state.rawValue)
-            else {
-                return .stopped
+              let pState = FlussonicPlayerAdapterState(rawValue: plr.state.rawValue)
+        else {
+            return .stopped
         }
         return  pState
     }
@@ -135,10 +136,10 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
 
     func stop() {
         guard let plr = player,
-            state != .stopped,
-            mediaState != .nothingSpecial
-            else {
-                return
+              state != .stopped,
+              mediaState != .nothingSpecial
+        else {
+            return
         }
         plr.stop()
     }
@@ -169,8 +170,8 @@ private extension FlussonicVlcAdapter {
         }
         timeObservation = plr.observe(\VLCMediaPlayer.time, options: [.new, .initial, .old], changeHandler: { [weak self] (_, kind) in
             guard let `self` = self,
-                let values = kind.newValue?.both(with: kind.oldValue.joining()),
-                values.a.value != nil, values.b.value != nil else { return }
+                  let values = kind.newValue?.both(with: kind.oldValue.joining()),
+                  values.a.value != nil, values.b.value != nil else { return }
             self.delegate?.mediaPlayerTimeChanged(oldTimeValue: values.b.value.doubleValue, newTimeValue: values.a.value.doubleValue)
         })
     }
