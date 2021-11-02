@@ -22,6 +22,8 @@ class CameraModel: NSObject, Mappable {
     
     var urlForPlayer = ""
     var urlForPreview = ""
+    
+    var watcherHost = ""
 
     override init() {
         super.init()
@@ -43,7 +45,7 @@ class CameraModel: NSObject, Mappable {
         urlForPlayer = "https://\(AuthorizationService.shared.session)@\(host)/\(name)?from=\(lastEventTime)/"
         print(urlForPlayer)
         urlForPreview = "https://\(host):\(streamStatus.https_port)/\(name)/preview.mp4?token=\(token)"
-        
+        watcherHost = host
     }
 }
 

@@ -30,8 +30,8 @@ class CameraViewController: UIViewController {
         }
         watcherView.alertDelegate = self
         watcherView.setHideToolbarInPortrait(shouldHideToolbar: true)
-        watcherView.configure(withCameraItem: camera, playerAdapter: playerAdapter)
         watcherView.setShowDebugInfo(newValue: true)
+        watcherView.configure(withCameraItem: camera, playerAdapter: playerAdapter, watcherBaseUrl: camera.watcherUrlString ?? "")
         watcherView.setTimelineMarkersV2(withTimelineMarkersV2: true)
     }
 

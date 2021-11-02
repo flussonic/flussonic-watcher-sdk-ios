@@ -29,7 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - "DynamicMobileVLCKit (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip\"}`)"
-  - "flussonic-watcher-sdk-ios (from `{:http=>\"https://front-ci.erlyvideo.ru/dist/watcher-sdk/ios/watcher-sdk/dg-18341-xcode13-1/FlussonicSDK.zip\"}`)"
+  - flussonic-watcher-sdk-ios (from `~/github/org.erlyvideo/flussonic-watcher-src-ios/Flussonic-ios/build/flussonic-watcher-sdk-ios`)
   - IQKeyboardManager
   - ObjectMapper
   - SwiftyJSON
@@ -52,13 +52,11 @@ EXTERNAL SOURCES:
   DynamicMobileVLCKit:
     :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip
   flussonic-watcher-sdk-ios:
-    :http: https://front-ci.erlyvideo.ru/dist/watcher-sdk/ios/watcher-sdk/dg-18341-xcode13-1/FlussonicSDK.zip
+    :path: "~/github/org.erlyvideo/flussonic-watcher-src-ios/Flussonic-ios/build/flussonic-watcher-sdk-ios"
 
 CHECKOUT OPTIONS:
   DynamicMobileVLCKit:
     :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip
-  flussonic-watcher-sdk-ios:
-    :http: https://front-ci.erlyvideo.ru/dist/watcher-sdk/ios/watcher-sdk/dg-18341-xcode13-1/FlussonicSDK.zip
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
@@ -75,6 +73,6 @@ SPEC CHECKSUMS:
   SwiftyXMLParser: 027d9e6fb54a38d95dccec025bcea9693f699c47
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
 
-PODFILE CHECKSUM: 518e95f0f76e46c9426d696d6271eda26ec0dc26
+PODFILE CHECKSUM: 325910bad2cd475e118fd2ee93bf8a400ce1bff1
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

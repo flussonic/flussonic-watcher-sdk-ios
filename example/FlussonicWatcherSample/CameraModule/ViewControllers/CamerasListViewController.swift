@@ -43,10 +43,11 @@ class CamerasListViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let cameraItem = allCamerasArray[indexPath.row]
+        var cameraItem = allCamerasArray[indexPath.row]
         if cameraItem.isAlive() == false {
             return
         } else {
+            cameraItem.setWatcherUrl(url: CameraService.shared.host)
             CameraRouting.showCameraScreen(fromVC: self, camera: cameraItem)
         }
     }
@@ -54,7 +55,6 @@ class CamerasListViewController: UIViewController, UITableViewDelegate, UITableV
     func loadData() {
         CameraService.shared.requestCamerasList { (allCameras, error) in
             self.allCamerasArray = allCameras
-            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
