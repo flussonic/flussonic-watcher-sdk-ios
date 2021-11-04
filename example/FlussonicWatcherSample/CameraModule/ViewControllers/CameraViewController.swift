@@ -12,11 +12,10 @@ import DynamicMobileVLCKit
 
 class CameraViewController: UIViewController {
     
-    @IBOutlet var playerView: UIView!
-    
+    @IBOutlet weak var watcherView: FlussonicWatcherView!
     var camera: CameraItem!
     private var playerAdapter = FlussonicPlayerAdapter()
-    private var watcherView = FlussonicWatcherView()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +28,13 @@ class CameraViewController: UIViewController {
         guard camera != nil else {
             return
         }
-        self.watcherView.frame = self.playerView.frame
-        self.watcherView.alertDelegate = self
-        self.playerView.addSubview(self.watcherView)
-        watcherView.configure(withCameraItem: camera, playerAdapter: playerAdapter)
+        watcherView.alertDelegate = self
+        watcherView.setHideToolbarInPortrait(shouldHideToolbar: true)
+        watcherView.setShowDebugInfo(newValue: true)
+        watcherView.configure(withCameraItem: camera, playerAdapter: playerAdapter, watcherBaseUrl: camera.watcherUrlString ?? "")
+        watcherView.setTimelineMarkersV2(withTimelineMarkersV2: true)
     }
+
     
     //MARK: - Navigation
     @IBAction func backButtonTouched(sender: AnyObject) {

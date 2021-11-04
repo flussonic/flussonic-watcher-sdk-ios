@@ -6,15 +6,16 @@ import UIKit
 import DynamicMobileVLCKit
 import FlussonicSDK
 
-class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPlayerDelegate {
-
+class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPlayerDelegate, VLCMediaDelegate {
+    
     private var player: VLCMediaPlayer?
 
     private var timeObservation: NSKeyValueObservation?
-
+    private var oldMedia: VLCMedia?
     override init() {
         super.init()
         player = VLCMediaPlayer()
+        //        player.libraryInstance.debugLogging = true
         player!.delegate = self
         setupTimeObservation()
     }
@@ -69,7 +70,6 @@ class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMedia
         set {
             stop()
             guard newValue != nil else { return }
-            player?.media = nil
             fixScaleToFill()
             player?.media = VLCMedia(url: newValue!)
             player?.play()
@@ -85,6 +85,18 @@ class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMedia
             guard player != nil else { return }
             disableAudioTrack(audioDisabled: newValue)
         }
+    }
+
+    /// nodoc - vlc player always returns media.tracksInformation with current track at the end of
+    var playerTracks: [StreamItem] {
+        guard let plr = player,
+              let media: VLCMedia = plr.media else { return [] }
+        let tracks = media.tracksInformation
+        let mappedTracks = tracks.map({ (item) -> StreamItem? in
+            guard let it = item as? [String: Any] else { return nil }
+            return StreamItem(from: it)
+        }) as? [StreamItem]
+        return mappedTracks ?? []
     }
 
     func disableAudioTrack(audioDisabled: Bool) {
@@ -148,6 +160,13 @@ class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMedia
         player?.saveVideoSnapshot(at: path, withWidth: width, andHeight: height)
     }
 
+    func parseMetaInfo() {
+        if let media: VLCMedia = player?.media {
+            media.delegate = self
+            media.parse(withOptions: VLCMediaParsingOptions(VLCMediaParseLocal | VLCMediaFetchLocal | VLCMediaParseNetwork | VLCMediaFetchNetwork))
+        }
+    }
+
     // MARK: - VLCMediaPlayerDelegate
     func mediaPlayerStateChanged(_ aNotification: Notification!) {
         delegate?.mediaPlayerStateChanged(Notification(name: Notification.Name("mediaPlayerStateChanged"), object: self, userInfo: nil))
@@ -159,6 +178,26 @@ class FlussonicPlayerAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMedia
 
     func mediaPlayerSnapshot(_ aNotification: Notification!) {
         delegate?.mediaPlayerSnapshot(Notification(name: Notification.Name("mediaPlayerSnapshot"), object: self, userInfo: nil))
+    }
+
+    // MARK: - VLCMediaDelegate
+
+    func mediaMetaDataDidChange(_ aMedia: VLCMedia) {
+        guard let delegate = self.delegate else { return }
+        let metadataChanged = oldMedia == nil || aMedia.compare(oldMedia!) != .orderedSame
+        if metadataChanged {
+            self.oldMedia = aMedia
+            delegate.mediaMetaDataDidChange(aMedia.metaDictionary as? [String: Any])
+        }
+    }
+
+    func mediaDidFinishParsing(_ aMedia: VLCMedia) {
+        guard let delegate = self.delegate else { return }
+        let metadataChanged = oldMedia == nil || aMedia.compare(oldMedia!) != .orderedSame
+        if metadataChanged {
+            self.oldMedia = aMedia
+            delegate.mediaMetaDataDidChange(aMedia.metaDictionary as? [String: Any])
+        }
     }
 }
 
