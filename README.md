@@ -34,7 +34,7 @@ pod install
 
 ## Troubleshooting
 
-The flussonic-watcher-sdk-ios frameworks were built with Xcode version 13.2 and are not compatible with other Xcode versions because of Apple restrictions concerning .swiftmodule files. We strongly recommend that you use only Xcode 13.2. When using Xcode of a different version, you may get errors like:
+The flussonic-watcher-sdk-ios frameworks were built with Xcode version 13.1 and are not compatible with other Xcode versions because of Apple restrictions concerning .swiftmodule files. We strongly recommend that you use only Xcode 13.1. When using Xcode of a different version, you may get errors like:
 
 ```
 Module compiled with Swift 4.2.1 cannot be imported by the Swift 5.0.1 compiler: flussonic-watcher-sdk-ios/example/Pods/flussonic-watcher-sdk-ios/FlussonicSDK.framework/Modules/FlussonicSDK.swiftmodule/x86_64.swiftmodule
