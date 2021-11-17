@@ -1,0 +1,68 @@
+PODS:
+  - Alamofire (5.4.4)
+  - Async (0.2.0)
+  - DynamicMobileVLCKit (3.3.13)
+  - flussonic-watcher-sdk-ios (2.7.0):
+    - Async
+    - DynamicMobileVLCKit (~> 3.3)
+    - Moya/RxSwift (~> 14.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+    - SwiftyXMLParser
+    - TrueTime (~> 5.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - RxCocoa (5.1.3):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.3):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.3)
+  - SwiftyXMLParser (5.5.0)
+  - TrueTime (5.0.3)
+
+DEPENDENCIES:
+  - "DynamicMobileVLCKit (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip\"}`)"
+  - "flussonic-watcher-sdk-ios (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.0/FlussonicSDK.zip\"}`)"
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Async
+    - Moya
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftyXMLParser
+    - TrueTime
+
+EXTERNAL SOURCES:
+  DynamicMobileVLCKit:
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip
+  flussonic-watcher-sdk-ios:
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.0/FlussonicSDK.zip
+
+CHECKOUT OPTIONS:
+  DynamicMobileVLCKit:
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip
+  flussonic-watcher-sdk-ios:
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.0/FlussonicSDK.zip
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  Async: d80205f1a1b4eea24de8ddc62cf5197ff3025330
+  DynamicMobileVLCKit: 59202100083620330a0d439a61a90261851e794a
+  flussonic-watcher-sdk-ios: 233907a3f4c4819d7b608822be69713379534b33
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
+  RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
+  SwiftyXMLParser: 027d9e6fb54a38d95dccec025bcea9693f699c47
+  TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
+
+PODFILE CHECKSUM: 80c099e6cddf81c1d4d8d11e835a86dcb477f2aa
+
+COCOAPODS: 1.11.2

@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A44DE865A148AC429EB8456 /* Pods_FlussonicDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0632819EFF9351E5BB121D /* Pods_FlussonicDemoApp.framework */; };
+		BCF2D6782743022400E72B9B /* MosaicListIsoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2D6732743022400E72B9B /* MosaicListIsoTVC.swift */; };
+		BCF2D6792743022400E72B9B /* CustomFlussonicTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2D6742743022400E72B9B /* CustomFlussonicTheme.swift */; };
+		BCF2D67A2743022400E72B9B /* CameraItem+FlussonicIso.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2D6752743022400E72B9B /* CameraItem+FlussonicIso.swift */; };
+		BCF2D67B2743022400E72B9B /* MosaicListIsoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2D6762743022400E72B9B /* MosaicListIsoTVCell.swift */; };
+		FD21E31F21BA5E2D007042B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD21E31E21BA5E2D007042B9 /* AppDelegate.swift */; };
+		FD21E32121BA5E2D007042B9 /* LoginIsoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD21E32021BA5E2D007042B9 /* LoginIsoViewController.swift */; };
+		FD21E32421BA5E2D007042B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD21E32221BA5E2D007042B9 /* Main.storyboard */; };
+		FD21E32621BA5E2F007042B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD21E32521BA5E2F007042B9 /* Assets.xcassets */; };
+		FD21E32921BA5E30007042B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD21E32721BA5E2F007042B9 /* LaunchScreen.storyboard */; };
+		FD3CF78421CD076D0034C7E4 /* PlayerIsoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF78321CD076D0034C7E4 /* PlayerIsoViewController.swift */; };
+		FD73F46921CB8B48009C4484 /* RotatingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73F46821CB8B48009C4484 /* RotatingNavigationController.swift */; };
+		FD73F46D21CBA4EC009C4484 /* MyCameraItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73F46C21CBA4EC009C4484 /* MyCameraItem.swift */; };
+		FD73F46F21CBA523009C4484 /* StreamStatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73F46E21CBA523009C4484 /* StreamStatusItem.swift */; };
+		FD82B30421BEA81900D0AEA3 /* CamerasListIsoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82B30321BEA81900D0AEA3 /* CamerasListIsoTVC.swift */; };
+		FD82B30621BEB28900D0AEA3 /* CameraListIsoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82B30521BEB28900D0AEA3 /* CameraListIsoTVCell.swift */; };
+		FDA53BCF2201A24900DC6ABD /* FlussonicVlcAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA53BCE2201A24900DC6ABD /* FlussonicVlcAdapter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD73F45121CB88F3009C4484 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		18BFE90875930DB77CA1EBCE /* Pods-FlussonicDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlussonicDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlussonicDemoApp/Pods-FlussonicDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		50C84E5FE74EE3D7EBEBFE72 /* Pods-FlussonicDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlussonicDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlussonicDemoApp/Pods-FlussonicDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AC0632819EFF9351E5BB121D /* Pods_FlussonicDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlussonicDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF2D6732743022400E72B9B /* MosaicListIsoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicListIsoTVC.swift; sourceTree = "<group>"; };
+		BCF2D6742743022400E72B9B /* CustomFlussonicTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFlussonicTheme.swift; sourceTree = "<group>"; };
+		BCF2D6752743022400E72B9B /* CameraItem+FlussonicIso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraItem+FlussonicIso.swift"; sourceTree = "<group>"; };
+		BCF2D6762743022400E72B9B /* MosaicListIsoTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicListIsoTVCell.swift; sourceTree = "<group>"; };
+		FD21E31C21BA5E2D007042B9 /* FlussonicDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlussonicDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD21E31E21BA5E2D007042B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD21E32021BA5E2D007042B9 /* LoginIsoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIsoViewController.swift; sourceTree = "<group>"; };
+		FD21E32321BA5E2D007042B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD21E32521BA5E2F007042B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD21E32821BA5E30007042B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD21E32A21BA5E30007042B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3CF78321CD076D0034C7E4 /* PlayerIsoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIsoViewController.swift; sourceTree = "<group>"; };
+		FD73F46821CB8B48009C4484 /* RotatingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingNavigationController.swift; sourceTree = "<group>"; };
+		FD73F46C21CBA4EC009C4484 /* MyCameraItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCameraItem.swift; sourceTree = "<group>"; };
+		FD73F46E21CBA523009C4484 /* StreamStatusItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamStatusItem.swift; sourceTree = "<group>"; };
+		FD82B30321BEA81900D0AEA3 /* CamerasListIsoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasListIsoTVC.swift; sourceTree = "<group>"; };
+		FD82B30521BEB28900D0AEA3 /* CameraListIsoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListIsoTVCell.swift; sourceTree = "<group>"; };
+		FDA53BCE2201A24900DC6ABD /* FlussonicVlcAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlussonicVlcAdapter.swift; sourceTree = "<group>"; };
+		FDA53BD02201A28700DC6ABD /* Flussonic-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Flussonic-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD21E31921BA5E2D007042B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A44DE865A148AC429EB8456 /* Pods_FlussonicDemoApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		734A71881FA1C835002C5BA0 = {
+			isa = PBXGroup;
+			children = (
+				FD21E31D21BA5E2D007042B9 /* FlussonicDemoApp */,
+				734A71921FA1C836002C5BA0 /* Products */,
+				C5B4E8F31DA74208318AE988 /* Pods */,
+				C42D55B290AF0F7C6F33A1C2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		734A71921FA1C836002C5BA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD21E31C21BA5E2D007042B9 /* FlussonicDemoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C42D55B290AF0F7C6F33A1C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC0632819EFF9351E5BB121D /* Pods_FlussonicDemoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5B4E8F31DA74208318AE988 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50C84E5FE74EE3D7EBEBFE72 /* Pods-FlussonicDemoApp.debug.xcconfig */,
+				18BFE90875930DB77CA1EBCE /* Pods-FlussonicDemoApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD21E31D21BA5E2D007042B9 /* FlussonicDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				FD21E31E21BA5E2D007042B9 /* AppDelegate.swift */,
+				FD73F46C21CBA4EC009C4484 /* MyCameraItem.swift */,
+				FD73F46E21CBA523009C4484 /* StreamStatusItem.swift */,
+				FD73F46821CB8B48009C4484 /* RotatingNavigationController.swift */,
+				FD21E32021BA5E2D007042B9 /* LoginIsoViewController.swift */,
+				FD82B30321BEA81900D0AEA3 /* CamerasListIsoTVC.swift */,
+				FD82B30521BEB28900D0AEA3 /* CameraListIsoTVCell.swift */,
+				FD3CF78321CD076D0034C7E4 /* PlayerIsoViewController.swift */,
+				FDA53BCE2201A24900DC6ABD /* FlussonicVlcAdapter.swift */,
+				FD21E32521BA5E2F007042B9 /* Assets.xcassets */,
+				BCF2D6752743022400E72B9B /* CameraItem+FlussonicIso.swift */,
+				BCF2D6742743022400E72B9B /* CustomFlussonicTheme.swift */,
+				BCF2D6732743022400E72B9B /* MosaicListIsoTVC.swift */,
+				BCF2D6762743022400E72B9B /* MosaicListIsoTVCell.swift */,
+				FD21E32221BA5E2D007042B9 /* Main.storyboard */,
+				FD21E32721BA5E2F007042B9 /* LaunchScreen.storyboard */,
+				FD21E32A21BA5E30007042B9 /* Info.plist */,
+				FDA53BD02201A28700DC6ABD /* Flussonic-Bridging-Header.h */,
+			);
+			path = FlussonicDemoApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD21E31B21BA5E2D007042B9 /* FlussonicDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD21E32B21BA5E30007042B9 /* Build configuration list for PBXNativeTarget "FlussonicDemoApp" */;
+			buildPhases = (
+				222DD03446EF9F196DEB2E73 /* [CP] Check Pods Manifest.lock */,
+				FD21E31821BA5E2D007042B9 /* Sources */,
+				FD21E31921BA5E2D007042B9 /* Frameworks */,
+				FD21E31A21BA5E2D007042B9 /* Resources */,
+				FD73F45121CB88F3009C4484 /* Embed Frameworks */,
+				E3DD3F2B3AFFFFD5BE4166B1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlussonicDemoApp;
+			productName = FlussonicIso;
+			productReference = FD21E31C21BA5E2D007042B9 /* FlussonicDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		734A71891FA1C835002C5BA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = 65apps;
+				TargetAttributes = {
+					FD21E31B21BA5E2D007042B9 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 734A718C1FA1C835002C5BA0 /* Build configuration list for PBXProject "FlussonicDemoApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = 734A71881FA1C835002C5BA0;
+			productRefGroup = 734A71921FA1C836002C5BA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD21E31B21BA5E2D007042B9 /* FlussonicDemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD21E31A21BA5E2D007042B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD21E32921BA5E30007042B9 /* LaunchScreen.storyboard in Resources */,
+				FD21E32621BA5E2F007042B9 /* Assets.xcassets in Resources */,
+				FD21E32421BA5E2D007042B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		222DD03446EF9F196DEB2E73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlussonicDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3DD3F2B3AFFFFD5BE4166B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlussonicDemoApp/Pods-FlussonicDemoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Async/Async.framework",
+				"${PODS_ROOT}/DynamicMobileVLCKit/DynamicMobileVLCKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+				"${BUILT_PRODUCTS_DIR}/TrueTime/TrueTime.framework",
+				"${PODS_ROOT}/flussonic-watcher-sdk-ios/FlussonicSDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicMobileVLCKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrueTime.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlussonicSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlussonicDemoApp/Pods-FlussonicDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD21E31821BA5E2D007042B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA53BCF2201A24900DC6ABD /* FlussonicVlcAdapter.swift in Sources */,
+				BCF2D67A2743022400E72B9B /* CameraItem+FlussonicIso.swift in Sources */,
+				FD73F46F21CBA523009C4484 /* StreamStatusItem.swift in Sources */,
+				FD82B30621BEB28900D0AEA3 /* CameraListIsoTVCell.swift in Sources */,
+				FD21E32121BA5E2D007042B9 /* LoginIsoViewController.swift in Sources */,
+				FD73F46921CB8B48009C4484 /* RotatingNavigationController.swift in Sources */,
+				BCF2D6792743022400E72B9B /* CustomFlussonicTheme.swift in Sources */,
+				FD73F46D21CBA4EC009C4484 /* MyCameraItem.swift in Sources */,
+				BCF2D67B2743022400E72B9B /* MosaicListIsoTVCell.swift in Sources */,
+				FD82B30421BEA81900D0AEA3 /* CamerasListIsoTVC.swift in Sources */,
+				BCF2D6782743022400E72B9B /* MosaicListIsoTVC.swift in Sources */,
+				FD21E31F21BA5E2D007042B9 /* AppDelegate.swift in Sources */,
+				FD3CF78421CD076D0034C7E4 /* PlayerIsoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FD21E32221BA5E2D007042B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD21E32321BA5E2D007042B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD21E32721BA5E2F007042B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD21E32821BA5E30007042B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		734A71AC1FA1C836002C5BA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		734A71AD1FA1C836002C5BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD21E32C21BA5E30007042B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50C84E5FE74EE3D7EBEBFE72 /* Pods-FlussonicDemoApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = FlussonicDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.erlyvideo.FlussonicDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "./FlussonicDemoApp/Flussonic-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD21E32D21BA5E30007042B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18BFE90875930DB77CA1EBCE /* Pods-FlussonicDemoApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = FlussonicDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.erlyvideo.FlussonicDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "./FlussonicDemoApp/Flussonic-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		734A718C1FA1C835002C5BA0 /* Build configuration list for PBXProject "FlussonicDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				734A71AC1FA1C836002C5BA0 /* Debug */,
+				734A71AD1FA1C836002C5BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD21E32B21BA5E30007042B9 /* Build configuration list for PBXNativeTarget "FlussonicDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD21E32C21BA5E30007042B9 /* Debug */,
+				FD21E32D21BA5E30007042B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 734A71891FA1C835002C5BA0 /* Project object */;
+}
