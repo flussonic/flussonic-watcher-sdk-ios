@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "flussonic-watcher-sdk-ios"
-    s.version      = "2.7.0"
+    s.version      = "2.7.1"
     s.summary      = "Flussonic Watcher iOS SDK"
     s.description  = <<-DESC
     Flussonic Watcher iOS SDK

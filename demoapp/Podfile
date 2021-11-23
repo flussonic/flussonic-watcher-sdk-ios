@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.1'
+
+project 'FlussonicDemoApp.xcworkspace'
+
+target 'FlussonicDemoApp' do
+  use_frameworks!
+  pod 'DynamicMobileVLCKit', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip'  
+  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.1/FlussonicSDK.zip'
+  
+  # pod 'flussonic-watcher-sdk-ios', :path => "~/github/org.erlyvideo/flussonic-watcher-src-ios/Flussonic-ios/build/flussonic-watcher-sdk-ios"
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == "RxSwift"
+      target.build_configurations.each do |config|
+        if config.name == "Debug"
+          config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = []
+        end
+      end
+    end
+  end
+end
