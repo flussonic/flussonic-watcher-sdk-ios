@@ -2,7 +2,7 @@ PODS:
   - Alamofire (5.4.4)
   - Async (0.2.0)
   - DynamicMobileVLCKit (3.3.13)
-  - flussonic-watcher-sdk-ios (2.7.0):
+  - flussonic-watcher-sdk-ios (2.7.1):
     - Async
     - DynamicMobileVLCKit (~> 3.3)
     - Moya/RxSwift (~> 14.0)
@@ -26,7 +26,7 @@ PODS:
 
 DEPENDENCIES:
   - "DynamicMobileVLCKit (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip\"}`)"
-  - "flussonic-watcher-sdk-ios (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.0/FlussonicSDK.zip\"}`)"
+  - "flussonic-watcher-sdk-ios (from `{:http=>\"https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.1/FlussonicSDK.zip\"}`)"
 
 SPEC REPOS:
   trunk:
@@ -43,13 +43,13 @@ EXTERNAL SOURCES:
   DynamicMobileVLCKit:
     :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip
   flussonic-watcher-sdk-ios:
-    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.0/FlussonicSDK.zip
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.1/FlussonicSDK.zip
 
 CHECKOUT OPTIONS:
   DynamicMobileVLCKit:
     :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip
   flussonic-watcher-sdk-ios:
-    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.0/FlussonicSDK.zip
+    :http: https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.7.1/FlussonicSDK.zip
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
