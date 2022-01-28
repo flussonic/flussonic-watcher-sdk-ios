@@ -35,6 +35,16 @@ class CamerasListIsoTVC: UITableViewController, CameraListIsoTVCellAlertDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if refreshControl == nil {
+            refreshControl = UIRefreshControl()
+        }
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+    }
+
+    @objc func refresh(_ sender: AnyObject) {
+        self.updateVisibleCells(time: Int(Date.currentRealDate.timeIntervalSince1970))
+        self.refreshControl?.endRefreshing()
     }
 
     override var shouldAutorotate: Bool {
@@ -95,6 +105,7 @@ class CamerasListIsoTVC: UITableViewController, CameraListIsoTVCellAlertDelegate
 
         default: break
         }
+        refreshControl
     }
 
     // MARK: - menu
@@ -159,7 +170,9 @@ class CamerasListIsoTVC: UITableViewController, CameraListIsoTVCellAlertDelegate
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     func startUpdatePreviewTimer() {
@@ -181,7 +194,7 @@ class CamerasListIsoTVC: UITableViewController, CameraListIsoTVCellAlertDelegate
         for tableCell in tableView.visibleCells {
             guard let cell = tableCell as? CameraListIsoTVCell else { continue }
             DispatchQueue.asyncInMainQueue(self, { (_) in
-                cell.updateCacheKey(key: newCacheKey)
+                cell.updateCacheKey(key: "\(cell.cameraItem?.name ?? "") \(newCacheKey)")
             })
         }
     }

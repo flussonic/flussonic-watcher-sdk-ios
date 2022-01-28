@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yla-Y2-Hr6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yla-Y2-Hr6">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,7 @@
         <!--Flussonic isolated demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginIsoViewController" customModule="FlussonicIso" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginIsoViewController" customModule="FlussonicDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q2r-ug-e6X"/>
                         <viewControllerLayoutGuide type="bottom" id="byd-mK-zZK"/>
@@ -130,7 +130,7 @@
         <!--Rotating Navigation Controller-->
         <scene sceneID="UAp-YX-Xwf">
             <objects>
-                <navigationController id="Yla-Y2-Hr6" customClass="RotatingNavigationController" customModule="FlussonicIso" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="Yla-Y2-Hr6" customClass="RotatingNavigationController" customModule="FlussonicDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SDK-e0-IXM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -151,19 +151,19 @@
         <!--Cameras-->
         <scene sceneID="u3X-MO-JNc">
             <objects>
-                <tableViewController id="3mc-aX-8cY" customClass="CamerasListIsoTVC" customModule="FlussonicIso" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3mc-aX-8cY" customClass="CamerasListIsoTVC" customModule="FlussonicDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ogq-5j-BRE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="LKk-I0-UnD">
-                            <rect key="frame" x="0.0" y="332" width="375" height="0.0"/>
+                            <rect key="frame" x="0.0" y="343" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CameraListIsoTVCell" rowHeight="276" id="zAr-9O-qRy" customClass="CameraListIsoTVCell" customModule="FlussonicIso" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="276"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CameraListIsoTVCell" rowHeight="276" id="zAr-9O-qRy" customClass="CameraListIsoTVCell" customModule="FlussonicDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="276"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zAr-9O-qRy" id="ded-V5-1fI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
@@ -274,7 +274,7 @@
         <!--Title-->
         <scene sceneID="rFi-DT-djN">
             <objects>
-                <viewController id="kDc-48-4xz" customClass="PlayerIsoViewController" customModule="FlussonicIso" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kDc-48-4xz" customClass="PlayerIsoViewController" customModule="FlussonicDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IwD-CQ-NNA"/>
                         <viewControllerLayoutGuide type="bottom" id="0Vb-ie-AJX"/>
@@ -342,19 +342,19 @@
         <!--Mosaics-->
         <scene sceneID="VKM-C7-M5V">
             <objects>
-                <tableViewController title="Mosaics" id="cCa-LN-bbu" customClass="MosaicListIsoTVC" customModule="FlussonicIso" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Mosaics" id="cCa-LN-bbu" customClass="MosaicListIsoTVC" customModule="FlussonicDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BhW-3T-9zg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="laF-Un-H2T">
-                            <rect key="frame" x="0.0" y="332" width="375" height="0.0"/>
+                            <rect key="frame" x="0.0" y="343" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MosaicListIsoTVCell" rowHeight="276" id="MVw-aZ-8jN" customClass="MosaicListIsoTVCell" customModule="FlussonicIso" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="276"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MosaicListIsoTVCell" rowHeight="276" id="MVw-aZ-8jN" customClass="MosaicListIsoTVCell" customModule="FlussonicDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="276"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MVw-aZ-8jN" id="ej7-EV-uXK">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
@@ -464,7 +464,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dhX-vd-3Kb"/>
+        <segue reference="t1b-Zw-BaW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="more" width="4" height="16"/>
