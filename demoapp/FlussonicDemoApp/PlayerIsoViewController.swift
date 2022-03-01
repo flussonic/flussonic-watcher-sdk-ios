@@ -14,7 +14,8 @@ class PlayerIsoViewController: UIViewController,
                                FlussonicDownloadRequestListener,
                                FlussonicWatcherDelegateProtocol,
                                FlussonicUpdateProgressEventListener,
-                               FlussonicPlayerErrorListener {
+                               FlussonicPlayerErrorListener,
+                               FlussonicQualityListener {
 
     @IBOutlet weak var flussonicView: FlussonicWatcherView!
 
@@ -52,7 +53,9 @@ class PlayerIsoViewController: UIViewController,
     func showAlert(title ttl: String, message msg: String) {
         let alert = UIAlertController(title: ttl, message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     override func viewDidLoad() {
@@ -72,11 +75,13 @@ class PlayerIsoViewController: UIViewController,
         flussonicView.currentTheme = FlussonicWatcherTheme(colors: CustomFlussonicTheme.toDict())
         flussonicView.delegate = self
         flussonicView.alertDelegate = self
+        flussonicView.setQualityListener(qualityListener: self)
         flussonicView.updateProgressEventListener = self
         flussonicView.bufferingListener = self
         flussonicView.downloadRequestListener = self
         flussonicView.playerErrorListener = self
 
+        flussonicView.videoQuality = .SD
         flussonicView.setHideToolbarInPortrait(shouldHideToolbar: true)
         flussonicView.setShowDebugInfo(newValue: true)
         flussonicView.setTimelineMarkersV2(withTimelineMarkersV2: true)
@@ -251,5 +256,11 @@ class PlayerIsoViewController: UIViewController,
 
     func onPlayerError(code: String, message: String, url: String) {
         print("onPlayerError called \nwith code: \(code)\n with url: \(url) \nwith message \(message)")
+    }
+
+    func onQualityChanged(quality: FlussonicVideoQuality) {
+        let qStr: String = quality.stringValue
+        let q1 = FlussonicVideoQuality(stringValue: "AUTO")
+        print("onQualityChanged \(qStr) \(String(describing: q1))")
     }
 }
