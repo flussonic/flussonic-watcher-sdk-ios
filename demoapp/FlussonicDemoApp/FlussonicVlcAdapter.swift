@@ -94,7 +94,7 @@ class FlussonicVlcAdapter: NSObject, FlussonicPlayerAdapterProtocol, VLCMediaPla
         let tracks = media.tracksInformation
         let mappedTracks = tracks.map({ (item) -> StreamItem? in
             guard let it = item as? [String: Any] else { return nil }
-            return StreamItem(from: it)
+            return StreamItem(fromPlayerTrack: it)
         }) as? [StreamItem]
         return mappedTracks ?? []
     }
