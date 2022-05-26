@@ -6,15 +6,20 @@ project 'FlussonicDemoApp.xcworkspace'
 target 'FlussonicDemoApp' do
   use_frameworks!
   pod 'DynamicMobileVLCKit', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip'  
-  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.8.0/FlussonicSDK.zip'
+    pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.10.0/FlussonicSDK.zip'
   
   # pod 'flussonic-watcher-sdk-ios', :path => "~/github/org.erlyvideo/flussonic-watcher-src-ios/Flussonic-ios/build/flussonic-watcher-sdk-ios"
 end
 
+dynamic_frameworks = ['DynamicMobileVLCKit','flussonic-watcher-sdk-ios', 'Alamofire', 'Async', 'Moya', 'RxRelay', 'RxCocoa', 'RxSwift', 'SwiftyXMLParser', 'TrueTime']
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    if target.name == "RxSwift"
-      target.build_configurations.each do |config|
+    target.build_configurations.each do |config|
+      if dynamic_frameworks.include?(target.name)
+          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      end
+      if target.name == "RxSwift"
         if config.name == "Debug"
           config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = []
         end
