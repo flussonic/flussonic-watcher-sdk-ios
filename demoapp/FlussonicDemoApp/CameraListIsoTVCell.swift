@@ -9,7 +9,7 @@
 import UIKit
 import FlussonicSDK
 
-protocol CameraListIsoTVCellAlertDelegate: class {
+protocol CameraListIsoTVCellAlertDelegate: AnyObject {
     func showAlert(title: String, message: String)
 }
 

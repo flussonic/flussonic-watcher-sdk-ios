@@ -36,7 +36,8 @@ class LoginIsoViewController: UIViewController {
               !password.isEmpty
         else { return }
 
-        let url = URL(string: "\(server)/vsaas/api/v2/auth/login")
+        var url = URL(string: "\(server)")
+        url = url?.appendingPathComponent("vsaas/api/v2/auth/login")
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
@@ -44,11 +45,14 @@ class LoginIsoViewController: UIViewController {
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameterDictionary, options: []) else { return }
         request.httpBody = httpBody
 
-        URLSession.shared.dataTask(with: request) { [weak self] data, _, error in
+        URLSession.shared.dataTask(with: request) { [weak self] data, resp, error in
             guard let data = data,
                   error == nil,
                   let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any]
-            else { return }
+            else {
+                print("Login error resp: \(resp) \n error: \(error)")
+
+                return }
 
             DispatchQueue.main.async {
                 self?.tokenTextField.text = json["session"] as? String

@@ -7,7 +7,7 @@
   # required dependency for flussonic-watcher-sdk-ios
   pod 'DynamicMobileVLCKit', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip'
 
-  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.9.1/FlussonicSDK.zip'
+  pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.10.0/FlussonicSDK.zip'
   ```
 
 - At the very bottom of Podfile add this because of RxSwift bug - https://github.com/ReactiveX/RxSwift/issues/1972
