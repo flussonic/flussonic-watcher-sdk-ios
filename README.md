@@ -6,15 +6,21 @@
   use_frameworks!
   # required dependency for flussonic-watcher-sdk-ios
   pod 'DynamicMobileVLCKit', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip'
+
   pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.10.1/FlussonicSDK.zip'
   ```
 
 - At the very bottom of Podfile add this because of RxSwift bug - https://github.com/ReactiveX/RxSwift/issues/1972
   ```ruby
+  dynamic_frameworks = ['DynamicMobileVLCKit','flussonic-watcher-sdk-ios', 'Alamofire', 'Async', 'Moya', 'RxRelay', 'RxCocoa', 'RxSwift', 'SwiftyXMLParser', 'TrueTime']
+
     post_install do |installer|
       installer.pods_project.targets.each do |target|
-        if target.name == "RxSwift"
-          target.build_configurations.each do |config|
+        target.build_configurations.each do |config|
+          if dynamic_frameworks.include?(target.name)
+              config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+          end
+          if target.name == "RxSwift"
             if config.name == "Debug"
               config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = []
             end
@@ -33,7 +39,7 @@ pod install
 
 ## Troubleshooting
 
-The flussonic-watcher-sdk-ios frameworks were built with Xcode version 13.1 and are not compatible with other Xcode versions because of Apple restrictions concerning .swiftmodule files. We strongly recommend that you use only Xcode 13.1. When using Xcode of a different version, you may get errors like:
+The flussonic-watcher-sdk-ios frameworks were built with Xcode version 13.3.1 and are not compatible with previous Xcode versions because of Apple restrictions concerning .swiftmodule files. We strongly recommend that you use only Xcode 13.3.1 or later. When using Xcode of a different version, you may get errors like:
 
 ```
 Module compiled with Swift 4.2.1 cannot be imported by the Swift 5.0.1 compiler: flussonic-watcher-sdk-ios/example/Pods/flussonic-watcher-sdk-ios/FlussonicSDK.framework/Modules/FlussonicSDK.swiftmodule/x86_64.swiftmodule
