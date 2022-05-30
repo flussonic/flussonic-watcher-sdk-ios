@@ -6,7 +6,6 @@
   use_frameworks!
   # required dependency for flussonic-watcher-sdk-ios
   pod 'DynamicMobileVLCKit', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/DynamicMobileVLCKit/release/3.3.13/DynamicMobileVLCKit.zip'
-
   pod 'flussonic-watcher-sdk-ios', :http => 'https://flussonic-watcher-mobile-sdk.s3.eu-central-1.amazonaws.com/ios/watcher-sdk/release/2.10.1/FlussonicSDK.zip'
   ```
 
