@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "flussonic-watcher-sdk-ios"
-    s.version      = "2.10.0"
+    s.version      = "2.10.1"
     s.summary      = "Flussonic Watcher iOS SDK"
     s.description  = <<-DESC
     Flussonic Watcher iOS SDK
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
     s.dependency "Moya/RxSwift", "~> 15.0"
     s.dependency "TrueTime", "~> 5.0"
     s.dependency "SwiftyXMLParser"
+    s.dependency 'Punycode', "~> 2.1"
     s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
     s.swift_versions = [ "5.1", "5.2", "5.3", "5.4", "5.5" ]
 
