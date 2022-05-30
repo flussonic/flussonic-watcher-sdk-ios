@@ -10,7 +10,6 @@
 		6A44DE865A148AC429EB8456 /* Pods_FlussonicDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0632819EFF9351E5BB121D /* Pods_FlussonicDemoApp.framework */; };
 		BCF2D6782743022400E72B9B /* MosaicListIsoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2D6732743022400E72B9B /* MosaicListIsoTVC.swift */; };
 		BCF2D6792743022400E72B9B /* CustomFlussonicTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2D6742743022400E72B9B /* CustomFlussonicTheme.swift */; };
-		BCF2D67A2743022400E72B9B /* CameraItem+FlussonicIso.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2D6752743022400E72B9B /* CameraItem+FlussonicIso.swift */; };
 		BCF2D67B2743022400E72B9B /* MosaicListIsoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2D6762743022400E72B9B /* MosaicListIsoTVCell.swift */; };
 		FD21E31F21BA5E2D007042B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD21E31E21BA5E2D007042B9 /* AppDelegate.swift */; };
 		FD21E32121BA5E2D007042B9 /* LoginIsoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD21E32021BA5E2D007042B9 /* LoginIsoViewController.swift */; };
@@ -19,7 +18,6 @@
 		FD21E32921BA5E30007042B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD21E32721BA5E2F007042B9 /* LaunchScreen.storyboard */; };
 		FD3CF78421CD076D0034C7E4 /* PlayerIsoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF78321CD076D0034C7E4 /* PlayerIsoViewController.swift */; };
 		FD73F46921CB8B48009C4484 /* RotatingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73F46821CB8B48009C4484 /* RotatingNavigationController.swift */; };
-		FD73F46D21CBA4EC009C4484 /* MyCameraItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73F46C21CBA4EC009C4484 /* MyCameraItem.swift */; };
 		FD73F46F21CBA523009C4484 /* StreamStatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73F46E21CBA523009C4484 /* StreamStatusItem.swift */; };
 		FD82B30421BEA81900D0AEA3 /* CamerasListIsoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82B30321BEA81900D0AEA3 /* CamerasListIsoTVC.swift */; };
 		FD82B30621BEB28900D0AEA3 /* CameraListIsoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82B30521BEB28900D0AEA3 /* CameraListIsoTVCell.swift */; };
@@ -45,7 +43,6 @@
 		AC0632819EFF9351E5BB121D /* Pods_FlussonicDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlussonicDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF2D6732743022400E72B9B /* MosaicListIsoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicListIsoTVC.swift; sourceTree = "<group>"; };
 		BCF2D6742743022400E72B9B /* CustomFlussonicTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFlussonicTheme.swift; sourceTree = "<group>"; };
-		BCF2D6752743022400E72B9B /* CameraItem+FlussonicIso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraItem+FlussonicIso.swift"; sourceTree = "<group>"; };
 		BCF2D6762743022400E72B9B /* MosaicListIsoTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicListIsoTVCell.swift; sourceTree = "<group>"; };
 		FD21E31C21BA5E2D007042B9 /* FlussonicDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlussonicDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD21E31E21BA5E2D007042B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +53,6 @@
 		FD21E32A21BA5E30007042B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3CF78321CD076D0034C7E4 /* PlayerIsoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIsoViewController.swift; sourceTree = "<group>"; };
 		FD73F46821CB8B48009C4484 /* RotatingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingNavigationController.swift; sourceTree = "<group>"; };
-		FD73F46C21CBA4EC009C4484 /* MyCameraItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCameraItem.swift; sourceTree = "<group>"; };
 		FD73F46E21CBA523009C4484 /* StreamStatusItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamStatusItem.swift; sourceTree = "<group>"; };
 		FD82B30321BEA81900D0AEA3 /* CamerasListIsoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasListIsoTVC.swift; sourceTree = "<group>"; };
 		FD82B30521BEB28900D0AEA3 /* CameraListIsoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListIsoTVCell.swift; sourceTree = "<group>"; };
@@ -115,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				FD21E31E21BA5E2D007042B9 /* AppDelegate.swift */,
-				FD73F46C21CBA4EC009C4484 /* MyCameraItem.swift */,
 				FD73F46E21CBA523009C4484 /* StreamStatusItem.swift */,
 				FD73F46821CB8B48009C4484 /* RotatingNavigationController.swift */,
 				FD21E32021BA5E2D007042B9 /* LoginIsoViewController.swift */,
@@ -124,7 +119,6 @@
 				FD3CF78321CD076D0034C7E4 /* PlayerIsoViewController.swift */,
 				FDA53BCE2201A24900DC6ABD /* FlussonicVlcAdapter.swift */,
 				FD21E32521BA5E2F007042B9 /* Assets.xcassets */,
-				BCF2D6752743022400E72B9B /* CameraItem+FlussonicIso.swift */,
 				BCF2D6742743022400E72B9B /* CustomFlussonicTheme.swift */,
 				BCF2D6732743022400E72B9B /* MosaicListIsoTVC.swift */,
 				BCF2D6762743022400E72B9B /* MosaicListIsoTVCell.swift */,
@@ -242,6 +236,7 @@
 				"${BUILT_PRODUCTS_DIR}/Async/Async.framework",
 				"${PODS_ROOT}/DynamicMobileVLCKit/DynamicMobileVLCKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Punycode/Punycode.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -255,6 +250,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicMobileVLCKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Punycode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -275,13 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA53BCF2201A24900DC6ABD /* FlussonicVlcAdapter.swift in Sources */,
-				BCF2D67A2743022400E72B9B /* CameraItem+FlussonicIso.swift in Sources */,
 				FD73F46F21CBA523009C4484 /* StreamStatusItem.swift in Sources */,
 				FD82B30621BEB28900D0AEA3 /* CameraListIsoTVCell.swift in Sources */,
 				FD21E32121BA5E2D007042B9 /* LoginIsoViewController.swift in Sources */,
 				FD73F46921CB8B48009C4484 /* RotatingNavigationController.swift in Sources */,
 				BCF2D6792743022400E72B9B /* CustomFlussonicTheme.swift in Sources */,
-				FD73F46D21CBA4EC009C4484 /* MyCameraItem.swift in Sources */,
 				BCF2D67B2743022400E72B9B /* MosaicListIsoTVCell.swift in Sources */,
 				FD82B30421BEA81900D0AEA3 /* CamerasListIsoTVC.swift in Sources */,
 				BCF2D6782743022400E72B9B /* MosaicListIsoTVC.swift in Sources */,

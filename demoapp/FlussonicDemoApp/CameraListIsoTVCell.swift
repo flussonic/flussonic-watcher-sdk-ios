@@ -9,7 +9,7 @@
 import UIKit
 import FlussonicSDK
 
-protocol CameraListIsoTVCellAlertDelegate: class {
+protocol CameraListIsoTVCellAlertDelegate: AnyObject {
     func showAlert(title: String, message: String)
 }
 
@@ -35,7 +35,7 @@ class CameraListIsoTVCell: UITableViewCell, PreviewMp4ViewStatusListener {
 
             // основной вариант с токеном камеры
             print("cameraItem didSet with url \(titleLabel.text)")
-            guard let url = cameraItem.previewUrlWithCameraToken(from: nil) else { return }
+            guard let url = cameraItem.cameraUrl(withToken: session, from: nil) else { return }
             print("cameraItem didSet with url \(url.absoluteString)")
             previewView.configure(withUrl: url, cacheKey: url.absoluteString)
             previewView.statusListener = self
