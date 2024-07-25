@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import FlussonicSDK
 
-protocol MosaicListIsoTVCellAlertDelegate: AnyObject {
+protocol MosaicListIsoTVCellAlertDelegate: class {
     func showAlert(title: String, message: String)
 }
 
